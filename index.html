@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brutalist video player powered by LuluStream." />
+  <title>LULU // PLAYER</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="/">LULU<span>PLAYER</span></a>
+    <div class="status"><i></i> SYSTEM ONLINE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">VIDEO DELIVERY / 001</p>
+        <h1>WATCH<br><span>WITHOUT</span><br>DECORATION.</h1>
+      </div>
+      <div class="hero-note">
+        <b>BRUTALIST MODE</b>
+        <p>Simple. Loud. Functional.</p>
+      </div>
+    </section>
+
+    <section class="player-shell">
+      <div class="player-head">
+        <span>LULUSTREAM // PLAYER</span>
+        <span id="clock">00:00:00</span>
+      </div>
+
+      <form class="url-bar" id="urlForm">
+        <label for="streamUrl">EMBED URL</label>
+        <input
+          id="streamUrl"
+          name="streamUrl"
+          type="url"
+          placeholder="https://your-lulustream-embed-url..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">LOAD PLAYER ↗</button>
+      </form>
+
+      <div class="url-message" id="urlMessage" aria-live="polite"></div>
+
+      <div class="player-frame">
+        <!--
+          GANTI src DI BAWAH dengan URL embed/player LuluStream lo.
+          Contoh:
+          <iframe src="URL_EMBED_LULUSTREAM" ...></iframe>
+        -->
+        <iframe
+          id="luluPlayer"
+          src="about:blank"
+          title="LuluStream Player"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+
+        <div class="player-placeholder" id="placeholder">
+          <strong>PLAYER READY</strong>
+          <span>Set your LuluStream embed URL in index.html</span>
+        </div>
+      </div>
+
+      <div class="player-foot">
+        <span>STREAM: LULUSTREAM</span>
+        <span>FORMAT: EMBED</span>
+        <span>STATUS: <b>READY</b></span>
+      </div>
+    </section>
+
+    <section class="saved-url">
+      <span>ACTIVE EMBED</span>
+      <code id="activeUrl">NONE</code>
+      <button type="button" id="clearPlayer">CLEAR</button>
+    </section>
+
+    <section class="info-grid">
+      <article class="box">
+        <span class="number">01</span>
+        <h2>FAST</h2>
+        <p>Minimal frontend. No framework. Deploy langsung ke Vercel.</p>
+      </article>
+      <article class="box invert">
+        <span class="number">02</span>
+        <h2>LOUD</h2>
+        <p>Typography besar, border tebal, warna kontras, dan layout brutalist.</p>
+      </article>
+      <article class="box">
+        <span class="number">03</span>
+        <h2>OPEN</h2>
+        <p>Gampang dimodif: judul, warna, player, metadata, sampai halaman tambahan.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 LULU PLAYER</span>
+    <span>BUILT FOR THE WEB</span>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
